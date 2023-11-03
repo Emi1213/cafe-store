@@ -1,6 +1,12 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import Nav from '../components/Nav.tsx';
 import '../styles/tailwind.css';
+const options = [
+  { href: '/', label: 'Inicio' },
+  { href: '/about', label: 'Acerca de' },
+  { href: '/servicios', label: 'Servicios' },
+  { href: '/contacto', label: 'Contacto' },
+];
 ---
 
 <html lang="en">
@@ -12,6 +18,6 @@ import '../styles/tailwind.css';
 		<title>Café Aroma</title>
 	</head>
 	<body>
-		<Navigation />
+		<Nav client:load options = {options} />
 	</body>
 </html>
