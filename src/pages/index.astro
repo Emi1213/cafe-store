@@ -3,10 +3,9 @@ import CarruselGallery from '../components/CarruselGallery';
 import Nav from '../components/Nav.tsx';
 import '../styles/global.css';
 const options = [
-  { href: '/', label: 'Inicio', String : 'pi pi-home'},
-  { href: '/about', label: 'Acerca de' , String : ' pi pi-users'},
-  { href: '/servicios', label: 'Servicios', String : 'pi pi-briefcase' },
-  { href: '/contacto', label: 'Contacto' , String : 'pi pi-phone'},
+  { href: '/about', label: 'Acerca de' , icon : ' pi pi-users'},
+  { href: '/servicios', label: 'Servicios', icon : 'pi pi-briefcase' },
+  { href: '/contact', label: 'Contacto' , icon : 'pi pi-phone'},
 ];
 ---
 
@@ -21,7 +20,8 @@ const options = [
 	<body >
 		<Nav client:load options = {options} />
 		<div class="w-full">
-			<CarruselGallery client:load />
+			<CarruselGallery client:visible />
+
 		</div>
 
 	</body>
